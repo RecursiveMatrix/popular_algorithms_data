@@ -117,7 +117,6 @@ def get_cmap(n, name='hsv'):
 def plot_cluster(X, AV, VAR, AV_real=None, VAR_real=None):
     # 定义颜色，与类别数一致
     cmap = get_cmap(k_cluster)
-
     plt.figure(figsize=(10, 8))
     plt.axis([-5, 23, -5, 23])
     plt.scatter(X[:, 0], X[:, 1], s=7)
@@ -127,7 +126,6 @@ def plot_cluster(X, AV, VAR, AV_real=None, VAR_real=None):
     for m in range(k_cluster):
         plot_args = {'fc': 'None', 'lw': 2, 'edgecolor': cmap(m), 'ls': ':'}
         ellipse = Ellipse(AV[m], 2 * VAR[m][0], 2 * VAR[m][1], **plot_args)
-        print( VAR[m][0], VAR[m][1])
         ax.add_patch(ellipse)
 
     # 画出实际类的范围
@@ -136,8 +134,8 @@ def plot_cluster(X, AV, VAR, AV_real=None, VAR_real=None):
             plot_args = {'fc': 'None', 'lw': 2, 'edgecolor': cmap(m), 'alpha': 0.5}
             ellipse = Ellipse(AV_real[m], 2 * VAR_real[m][0], 2 * VAR_real[m][1], **plot_args)
             print(VAR_real[m][0], VAR_real[m][1])
-
             ax.add_patch(ellipse)
+
     plt.show()
 
 
