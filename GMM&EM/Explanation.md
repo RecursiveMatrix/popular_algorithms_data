@@ -24,4 +24,11 @@ to a relative convinced range.
   `update_prob_cluster`: this function returns the probabilities which indicates the ratio of each group using updated W.  
   `update_AV`: update means using the dataset and W.  
   `update_VAR`: update variances using dataset,means and W.  
-# Result  
+# Result 
+The distribution of original dataset:
+![image](https://github.com/RecursiveMatrix/popular_algorithms_data/blob/master/GMM%26EM/screenshorts/distribution_of_data.jpg)  
+The result of clustering at first:  
+![image](https://github.com/RecursiveMatrix/popular_algorithms_data/blob/master/GMM%26EM/screenshorts/clustering1.jpg)
+The result of clustering after 5 iterations:  
+![image](https://github.com/RecursiveMatrix/popular_algorithms_data/blob/master/GMM%26EM/screenshorts/clustering2.jpg)
+Besides, the value of log drops dramatically from -8.131 to -5.460.
