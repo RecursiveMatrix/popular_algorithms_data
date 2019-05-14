@@ -69,8 +69,8 @@ import matplotlib.pyplot as plt
 
 # train数据里面每个sample是一个词条，后面跟着一个标签，0=文言文，1=现代文
 # train的维度（5000，3），test（3385，2），train中有id，词条，标签，test中只有id和词条
-train = pd.read_csv('/Users/lishuo/PycharmProjects/sofasofa/tutorial/word2vec/train.txt')
-test = pd.read_csv('/Users/lishuo/PycharmProjects/sofasofa/tutorial/word2vec/test.txt')
+train = pd.read_csv('train.txt')
+test = pd.read_csv('test.txt')
 texts = list(train['text'])+list(test['text'])
 
 # 把每个字当作一个word，每个字都被表示为一个向量
