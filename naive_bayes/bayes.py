@@ -14,8 +14,8 @@ import pandas as pd
 import math
 from collections import defaultdict
 
-train = pd.read_csv('/Users/lishuo/PycharmProjects/sofasofa/tutorial/bayes/train.txt')
-test = pd.read_csv('/Users/lishuo/PycharmProjects/sofasofa/tutorial/bayes/test.txt')
+train = pd.read_csv('train.txt')
+test = pd.read_csv('test.txt')
 
 
 # check if the distribution is biased or not
@@ -133,5 +133,4 @@ print(test.head(20))
 # 2 根据两个组分别求似然概率，在性别男的标签下计算每个字出现的概率，在性别女的标签下计算每个字出现的概率
 # 3 把似然概率结果进行Laplace处理，目的是防止测试集出现训练集里没有的字，平滑过程需要：当前字出现次数，句子长度，参数，句子中包含的不同字
 # 4 根据贝叶斯公式：先算出这个性别（标签）下的概率，取log，再加上所有字都没有出现的概率（即 1-出现字的概率，已经通过Laplace得到），求和，再取对数
-# 5 单独计算出现某个字的概率，根据这个字进行laplace处理，然后根据公式求出
-# 6
+# 5 由得出的概率判断标签类别
